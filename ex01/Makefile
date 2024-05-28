@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/24 11:45:12 by anurtiag          #+#    #+#              #
-#    Updated: 2024/05/24 12:09:13 by anurtiag         ###   ########.fr        #
+#    Created: 2024/05/27 10:01:41 by anurtiag          #+#    #+#              #
+#    Updated: 2024/05/27 10:02:10 by anurtiag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	cpp
+NAME			=	phonebook
 
 
-SRCS			=	hello.cpp
+SRCS			=	phonebook.cpp
 
 
 OBJ				=	$(SRCS:.cpp=.o)

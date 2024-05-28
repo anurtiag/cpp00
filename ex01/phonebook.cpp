@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hello.cpp                                          :+:      :+:    :+:   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/24 11:46:02 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/05/24 12:46:29 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/05/28 08:56:34 by anurtiag          #+#    #+#             */
+/*   Updated: 2024/05/28 11:00:22 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <cstdlib>
-#include <iostream>
+#include "Phonebook.hpp"
 
-int main(int argc, char *argv[])
+int main(void)
 {
-    int i = 0;
-    
-    if(argc < 2)
-        return(0);
-    while(argv[i])
+    Phonebook p;
+    p.initial_loop();
     return(0);
 }
