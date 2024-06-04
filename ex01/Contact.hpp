@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 08:55:55 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/05/28 13:59:01 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/04 07:41:41 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string>
 # include <iostream>
+# include <regex>
+# include <iomanip>
 
 class Contact
 {
@@ -39,10 +41,15 @@ public:
         std::cout << "Please enter a darkest secret: " << std::endl;
         getline(std::cin, darkest_secret);
     }
-    void    search_user(int i)
+    void    print_user(Contact contact)
     {
-        std::cout << " hola mi nombre es: " << first_name << "mi apellido es :" << last_name << "y mi numero es: " << i << std::endl;
+        std::cout << "First name: " << contact.first_name << std::endl;
+        std::cout << "Last name: " << contact.last_name << std::endl;
+        std::cout << "Nickname: " << contact.nickname << std::endl;
+        std::cout << "Phone number: " << contact.phone_number << std::endl;
+        std::cout << "Darkest secret: " << contact.darkest_secret << std::endl;
     }
+    
 };
 
 
