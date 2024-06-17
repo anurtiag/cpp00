@@ -6,14 +6,14 @@
 #    By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 09:50:01 by anurtiag          #+#    #+#              #
-#    Updated: 2024/06/07 09:50:28 by anurtiag         ###   ########.fr        #
+#    Updated: 2024/06/17 09:23:43 by anurtiag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	prueba
 
 
-SRCS			=	prueba.cpp
+SRCS			=	tests.cpp Account.cpp
 
 
 OBJ				=	$(SRCS:.cpp=.o)
@@ -21,10 +21,11 @@ OBJ				=	$(SRCS:.cpp=.o)
 
 CC				=	c++
 
+
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 
-RM				=	rm -rf
 
+RM				=	rm -rf
 
 
 all:			$(NAME)
