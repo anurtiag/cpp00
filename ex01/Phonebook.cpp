@@ -6,17 +6,17 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 08:56:34 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/06 16:16:23 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/17 16:14:35 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 
-void Phonebook::initial_loop()
+void    Phonebook::initial_loop()
 {
     std::string input;
     index = -1;
-    total = 0;
+    total = -1;
     while(1)
     {
         std::cout << "Please select an option: ADD, SEARCH or EXIT" << std::endl;
@@ -26,7 +26,7 @@ void Phonebook::initial_loop()
             index++;
             contacts[index].add_user();
         }
-        if (total < index)
+        else if (total < index)
             total = index;
         else if(input == "SEARCH")
             search_user(contacts, (total));
@@ -34,12 +34,24 @@ void Phonebook::initial_loop()
             break ;
         else
             std::cout << "Wrong input :(" << std::endl;
+        if (std::cin.eof())
+            break ;
         if (index == 7)
             index = -1;
     }
 }
 
-void Phonebook::search_user(Contact contacts[8], int index)
+bool    Phonebook::ft_is_num(std::string str)
+{
+    for(int i = 0; i < (int)str.length(); i++)
+    {
+        if(str[i] < '0' || str[i] > '9')
+            return (false);
+    }
+    return (true);
+}
+
+void    Phonebook::search_user(Contact contacts[8], int index)
 {
     std::string input;
     int user;
@@ -52,13 +64,12 @@ void Phonebook::search_user(Contact contacts[8], int index)
     contacts->truncate("nickname");
     std::cout << std::endl;
     std::cout << "|" << std::setfill('-') << std::setw(44) << "|" << std::endl;
-    for(size_t i = 0; i <= index; i++)
+    for(int i = 0; i <= index; i++)
         contacts->print_list(contacts[i], i);
     std::cout << "Please select an user: " << std::endl;
     getline(std::cin, input);
-    std::regex ft_isnum("^[0-9]+$");
     user = std::atoi(input.c_str());
-    if (std::regex_match(input, ft_isnum) && (user >= 0 && user <= index))
+    if ((ft_is_num(input) == true) && (user >= 0 && user <= index))
         contacts[user].print_user(contacts[user]);
     else
         std::cout << "learn to type ;)" << std::endl;
