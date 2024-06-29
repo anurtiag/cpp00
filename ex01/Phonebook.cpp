@@ -6,13 +6,13 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 08:56:34 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/17 16:14:35 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:20:27 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 
-void    Phonebook::initial_loop()
+void    Phonebook::initial_loop()//garbanzo
 {
     std::string input;
     index = -1;
